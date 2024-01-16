@@ -1,4 +1,4 @@
-# Poker Game in Next.js
+# Poker Game in Next.js :beers: 
 1. run ```yarn && yarn build && yarn start```
 2. enyoj.
 
