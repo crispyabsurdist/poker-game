@@ -74,10 +74,6 @@ function getDuplicates(counts: Counts): Counts {
   );
 }
 
-function byCountFirst(a: string, b: string) {
-  return b.localeCompare(a);
-}
-
 function count(c: Counts, a: string) {
   c[a] = (c[a] || 0) + 1;
   return c;
