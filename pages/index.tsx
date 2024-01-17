@@ -42,22 +42,26 @@ const Home = () => {
   
 
   return (
-    <div className='flex flex-col justify-center items-center space-y-4'>
+    <div className='flex flex-col justify-center items-center space-y-2 pt-10'>
       {hands.map((hand, index) => (
         <DisplayHands key={index} hand={hand} result={result} />
       ))}
-      <button
-        className='bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'
-        onClick={compareHands}
-      >
-        Compare Hands
-      </button>
-      <button
-        className='bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded'
-        onClick={drawHands}
-      >
-        Draw New Hands
-      </button>
+      <div className='py-8'>
+        <button
+          className='mr-2 inline-flex items-center rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'
+          onClick={compareHands}
+        >
+          Compare Hands
+        </button>
+        <button
+          className='inline-flex items-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-green-600'
+          onClick={() => {
+            drawHands();
+          }}
+        >
+          Draw New Hands
+        </button>
+      </div>
     </div>
   );
 };
